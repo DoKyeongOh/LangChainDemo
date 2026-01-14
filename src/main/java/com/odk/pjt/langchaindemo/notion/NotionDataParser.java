@@ -1,6 +1,16 @@
-package com.odk.pjt.langchaindemo.collect.notion;
+package com.odk.pjt.langchaindemo.notion;
 
-import notion.api.v1.model.blocks.*;
+import notion.api.v1.model.blocks.Block;
+import notion.api.v1.model.blocks.BulletedListItemBlock;
+import notion.api.v1.model.blocks.CalloutBlock;
+import notion.api.v1.model.blocks.HeadingOneBlock;
+import notion.api.v1.model.blocks.HeadingThreeBlock;
+import notion.api.v1.model.blocks.HeadingTwoBlock;
+import notion.api.v1.model.blocks.NumberedListItemBlock;
+import notion.api.v1.model.blocks.ParagraphBlock;
+import notion.api.v1.model.blocks.QuoteBlock;
+import notion.api.v1.model.blocks.ToDoBlock;
+import notion.api.v1.model.blocks.ToggleBlock;
 import notion.api.v1.model.common.PropertyType;
 import notion.api.v1.model.pages.PageProperty;
 import notion.api.v1.model.search.SearchResult;
@@ -11,7 +21,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @Component
-public class NotionParser {
+public class NotionDataParser {
 
     /**
      * 페이지 정보와 블록들을 합쳐 하나의 문자열로 변환합니다.

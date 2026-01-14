@@ -1,4 +1,4 @@
-package com.odk.pjt.langchaindemo.collect.notion;
+package com.odk.pjt.langchaindemo.notion;
 
 import notion.api.v1.NotionClient;
 import notion.api.v1.model.blocks.*;

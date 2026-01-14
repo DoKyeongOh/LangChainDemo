@@ -1,4 +1,4 @@
-package com.odk.pjt.langchaindemo.collect.notion;
+package com.odk.pjt.langchaindemo.notion;
 
 import com.odk.pjt.langchaindemo.embedding.DataEmbeddingPipeline;
 import notion.api.v1.model.blocks.Block;
@@ -14,10 +14,10 @@ import java.util.Map;
 public class NotionIngestionService {
 
     private final NotionCollectClient client;
-    private final NotionParser parser;
+    private final NotionDataParser parser;
     private final DataEmbeddingPipeline pipeline;
 
-    public NotionIngestionService(NotionCollectClient client, NotionParser parser, DataEmbeddingPipeline pipeline) {
+    public NotionIngestionService(NotionCollectClient client, NotionDataParser parser, DataEmbeddingPipeline pipeline) {
         this.client = client;
         this.parser = parser;
         this.pipeline = pipeline;
