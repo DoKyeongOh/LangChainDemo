@@ -46,7 +46,7 @@ public class NotionIngestionService {
 
             if (!text.isEmpty()) {
                 // 개별 오브젝트 단위로 임베딩 파이프라인 실행
-                pipeline.run(text, metadata);
+                pipeline.embed(text, metadata);
             }
         }
     }

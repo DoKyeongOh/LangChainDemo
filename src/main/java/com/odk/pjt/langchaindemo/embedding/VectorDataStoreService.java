@@ -2,16 +2,18 @@ package com.odk.pjt.langchaindemo.embedding;
 
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.segment.TextSegment;
-import dev.langchain4j.store.embedding.EmbeddingStore;
+import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class VectorDataStoreService implements DataStoreService {
 
-    private final EmbeddingStore<TextSegment> embeddingStore;
+    private final InMemoryEmbeddingStore<TextSegment> embeddingStore;
 
-    public VectorDataStoreService(EmbeddingStore<TextSegment> embeddingStore) {
-        this.embeddingStore = embeddingStore;
+    public VectorDataStoreService() {
+        this.embeddingStore = new InMemoryEmbeddingStore<>();
     }
 
     @Override

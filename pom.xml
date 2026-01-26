@@ -47,6 +47,15 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.langchain4j</groupId>
+            <artifactId>langchain4j</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j-core</artifactId>
             <version>1.1.0</version>
@@ -56,16 +65,20 @@
             <artifactId>langchain4j-google-ai-gemini</artifactId>
             <version>1.1.0-rc1</version>
         </dependency>
+
+        <!-- Document Text Extracting -->
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-document-parser-apache-tika</artifactId>
+            <artifactId>langchain4j-document-parser-apache-pdfbox</artifactId>
             <version>1.1.0-beta7</version>
         </dependency>
         <dependency>
             <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-pgvector</artifactId>
+            <artifactId>langchain4j-document-parser-apache-poi</artifactId>
             <version>1.1.0-beta7</version>
+            <scope>compile</scope>
         </dependency>
+
         <dependency>
             <groupId>com.github.seratch</groupId>
             <artifactId>notion-sdk-jvm-core</artifactId>
